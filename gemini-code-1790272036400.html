@@ -1,0 +1,1766 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài Kiểm Tra Tiếng Anh Unit 14 - Ms Lê Hằng English</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Nunito', sans-serif;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        body {
+            min-height: 100vh;
+            background: linear-gradient(-45deg, #8854C0, #FDCB6E, #00C9A7, #FF7675, #6C5CE7);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            padding: 20px 10px 60px 10px;
+            color: #2d3436;
+            position: relative;
+            overflow-x: hidden;
+        }
+
+        @keyframes gradientBG {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .bg-patterns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            opacity: 0.25;
+            background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120"><g fill="%23FFFFFF"><path d="M20 10l3 6 6 3-6 3-3 6-3-6-6-3 6-3z"/><circle cx="80" cy="30" r="8"/><path d="M100 80c0 5-5 10-10 10s-10-5-10-10 5-10 10-10 10 5 10 10z"/><path d="M30 90l5-10 10 5-5 10z"/><path d="M70 100l2 4 4 2-4 2-2 4-2-4-4-2 4-2z"/></g></svg>');
+            animation: floatPatterns 20s linear infinite;
+        }
+
+        @keyframes floatPatterns {
+            from { background-position: 0 0; }
+            to { background-position: 120px 240px; }
+        }
+
+        .container {
+            max-width: 820px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 1;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .teacher-badge {
+            display: inline-block;
+            background: #ffffff;
+            color: #6C5CE7;
+            padding: 6px 18px;
+            border-radius: 30px;
+            font-size: 15px;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.15);
+            margin-bottom: 10px;
+            border: 2px solid #6C5CE7;
+            transform: rotate(-1deg);
+        }
+
+        .main-title {
+            font-size: 26px;
+            font-weight: 900;
+            color: #ffffff;
+            text-shadow: 2px 3px 0px rgba(0,0,0,0.2);
+            margin-bottom: 12px;
+        }
+
+        .reminder-card {
+            background: #FFF9E6;
+            border: 3px solid #FFEAA7;
+            border-left: 8px solid #FDCB6E;
+            border-radius: 18px;
+            padding: 16px 20px;
+            margin-bottom: 25px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+
+        .reminder-title {
+            color: #D63031;
+            font-weight: 900;
+            font-size: 17px;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+        }
+
+        .reminder-text {
+            color: #2d3436;
+            font-size: 14.5px;
+            line-height: 1.5;
+            font-weight: 700;
+        }
+
+        .reminder-highlight {
+            display: block;
+            margin-top: 8px;
+            color: #6C5CE7;
+            font-weight: 800;
+            font-style: italic;
+        }
+
+        .question-card {
+            background: #ffffff;
+            border-radius: 24px;
+            padding: 24px;
+            margin-bottom: 22px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.12);
+            border: 3px solid #F0F0F0;
+            transition: transform 0.2s ease;
+            position: relative;
+        }
+
+        .q-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 14px;
+            border-bottom: 2px dashed #f0f0f0;
+            padding-bottom: 10px;
+        }
+
+        .q-number {
+            background: #6C5CE7;
+            color: white;
+            font-weight: 800;
+            font-size: 14px;
+            padding: 4px 14px;
+            border-radius: 12px;
+            box-shadow: 0 3px 0 #4b38b3;
+        }
+
+        .q-type {
+            font-size: 12.5px;
+            font-weight: 700;
+            color: #b2bec3;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .q-text {
+            font-size: 17px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.6;
+            margin-bottom: 18px;
+        }
+
+        .q-text u {
+            color: #e84393;
+            font-weight: 900;
+            text-decoration-color: #e84393;
+            text-decoration-thickness: 3px;
+            padding: 0 2px;
+        }
+
+        .q-text b {
+            color: #6C5CE7;
+            font-weight: 900;
+        }
+
+        .options-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 12px;
+            margin-bottom: 10px;
+        }
+
+        @media (max-width: 600px) {
+            .options-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        .opt-btn {
+            background: #F8F9FA;
+            border: 2px solid #E9ECEF;
+            border-bottom: 5px solid #DEE2E6;
+            border-radius: 18px;
+            padding: 13px 16px;
+            font-size: 15.5px;
+            font-weight: 700;
+            color: #495057;
+            text-align: left;
+            cursor: pointer;
+            transition: all 0.15s ease;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            outline: none;
+            user-select: none;
+        }
+
+        .opt-btn:hover:not([disabled]) {
+            transform: translateY(-2px) scale(1.01);
+            background: #EDF2F7;
+            border-color: #CBD5E0;
+        }
+
+        .opt-btn:active:not([disabled]) {
+            transform: translateY(2px);
+            border-bottom-width: 2px;
+        }
+
+        .opt-prefix {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: #E2E8F0;
+            color: #4A5568;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 13px;
+            font-weight: 800;
+            flex-shrink: 0;
+        }
+
+        .opt-btn.correct {
+            background: #E6F9F0 !important;
+            border-color: #00D26A !important;
+            border-bottom: 5px solid #00A852 !important;
+            color: #007A3D !important;
+        }
+        .opt-btn.correct .opt-prefix {
+            background: #00D26A !important;
+            color: white !important;
+        }
+
+        .opt-btn.wrong {
+            background: #FFEAEA !important;
+            border-color: #FF4757 !important;
+            border-bottom: 5px solid #D63031 !important;
+            color: #C0392B !important;
+            animation: shake 0.4s ease;
+        }
+        .opt-btn.wrong .opt-prefix {
+            background: #FF4757 !important;
+            color: white !important;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            20%, 60% { transform: translateX(-6px); }
+            40%, 80% { transform: translateX(6px); }
+        }
+
+        .explanation-box {
+            display: none;
+            margin-top: 18px;
+            background: #F3F0FF;
+            border: 2px dashed #9B51E0;
+            border-radius: 18px;
+            padding: 16px 18px;
+            animation: fadeIn 0.3s ease-in-out;
+        }
+
+        .explanation-box.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(8px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .exp-head {
+            font-weight: 900;
+            color: #6C5CE7;
+            font-size: 15px;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .exp-section {
+            margin-bottom: 8px;
+            font-size: 14px;
+            line-height: 1.55;
+            color: #2d3436;
+        }
+
+        .exp-section strong {
+            color: #6C5CE7;
+        }
+
+        .exp-list {
+            margin-left: 12px;
+            list-style: none;
+        }
+
+        .exp-list li {
+            margin-bottom: 3px;
+            position: relative;
+            padding-left: 14px;
+        }
+
+        .exp-list li::before {
+            content: "•";
+            position: absolute;
+            left: 0;
+            color: #8854C0;
+            font-weight: bold;
+        }
+
+        .submit-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+
+        .submit-btn {
+            background: #00D26A;
+            color: white;
+            font-size: 20px;
+            font-weight: 900;
+            padding: 16px 45px;
+            border: none;
+            border-bottom: 6px solid #00A852;
+            border-radius: 30px;
+            cursor: pointer;
+            box-shadow: 0 10px 25px rgba(0, 210, 106, 0.4);
+            transition: all 0.2s ease;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px) scale(1.03);
+            background: #00E676;
+        }
+
+        .submit-btn:active {
+            transform: translateY(3px);
+            border-bottom-width: 2px;
+        }
+
+        .modal-overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0,0,0,0.6);
+            backdrop-filter: blur(5px);
+            z-index: 1000;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+
+        .modal-card {
+            background: white;
+            border-radius: 28px;
+            max-width: 500px;
+            width: 100%;
+            padding: 30px 24px;
+            text-align: center;
+            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            border: 4px solid #6C5CE7;
+            animation: popIn 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes popIn {
+            from { transform: scale(0.7); opacity: 0; }
+            to { transform: scale(1); opacity: 1; }
+        }
+
+        .modal-score {
+            font-size: 48px;
+            font-weight: 900;
+            color: #6C5CE7;
+            margin: 10px 0;
+        }
+
+        .modal-msg {
+            font-size: 16px;
+            font-weight: 700;
+            color: #2d3436;
+            line-height: 1.5;
+            margin-bottom: 24px;
+            background: #F8F9FA;
+            padding: 16px;
+            border-radius: 16px;
+            border-left: 5px solid #6C5CE7;
+        }
+
+        .close-modal-btn {
+            background: #6C5CE7;
+            color: white;
+            border: none;
+            border-bottom: 4px solid #4b38b3;
+            padding: 12px 30px;
+            border-radius: 20px;
+            font-size: 16px;
+            font-weight: 800;
+            cursor: pointer;
+        }
+
+        #confetti-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 999;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="bg-patterns"></div>
+    <canvas id="confetti-canvas"></canvas>
+
+    <div class="container">
+        <header>
+            <div class="teacher-badge">👩‍🏫 Giáo viên tạo: Ms Lê Hằng English</div>
+            <h1 class="main-title">🎯 BÀI KIỂM TRA TIẾNG ANH UNIT 14 TƯƠNG TÁC</h1>
+        </header>
+
+        <div class="reminder-card">
+            <div class="reminder-title">
+                <span>⚠️ LỜI NHẮC CỰC KỲ QUAN TRỌNG ⚠️</span>
+            </div>
+            <div class="reminder-text">
+                Chỉ có đọc kỹ giải thích ngay sau mỗi câu, sau đó ghi lại từ vựng/cấu trúc mới vào vở để học thì mới thực sự giỏi lên.<br>
+                Làm cho xong mà không đọc giải thích hay đọc qua loa không ghi chép thì chỉ tốn thời gian vô ích!
+                <span class="reminder-highlight">* Kéo tới đâu, làm tới đó! *</span>
+            </div>
+        </div>
+
+        <div id="quiz-container"></div>
+
+        <div class="submit-container">
+            <button class="submit-btn" onclick="submitQuiz()">NỘP BÀI THI 🚀</button>
+        </div>
+    </div>
+
+    <div class="modal-overlay" id="result-modal">
+        <div class="modal-card">
+            <div style="font-size: 50px;">🏆</div>
+            <h2 style="font-weight: 900; color:#2d3436;">KẾT QUẢ BÀI LÀM</h2>
+            <div class="modal-score" id="score-text">0 / 50</div>
+            <div class="modal-msg" id="comment-text">...</div>
+            <button class="close-modal-btn" onclick="closeModal()">ĐÓNG VÀ XEM LẠI BÀI 📝</button>
+        </div>
+    </div>
+
+    <script>
+        const AudioContext = window.AudioContext || window.webkitAudioContext;
+        let audioCtx = null;
+
+        function initAudio() {
+            if (!audioCtx) audioCtx = new AudioContext();
+        }
+
+        function playSound(type) {
+            try {
+                initAudio();
+                if (audioCtx.state === 'suspended') audioCtx.resume();
+
+                if (type === 'correct') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sine';
+                    osc.frequency.setValueAtTime(659.25, audioCtx.currentTime);
+                    osc.frequency.exponentialRampToValueAtTime(1318.51, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.3, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.4);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.4);
+                } else if (type === 'wrong') {
+                    const osc = audioCtx.createOscillator();
+                    const gain = audioCtx.createGain();
+                    osc.type = 'sawtooth';
+                    osc.frequency.setValueAtTime(220, audioCtx.currentTime);
+                    osc.frequency.setValueAtTime(160, audioCtx.currentTime + 0.15);
+                    osc.frequency.setValueAtTime(110, audioCtx.currentTime + 0.3);
+                    gain.gain.setValueAtTime(0.25, audioCtx.currentTime);
+                    gain.gain.exponentialRampToValueAtTime(0.01, audioCtx.currentTime + 0.45);
+                    osc.connect(gain);
+                    gain.connect(audioCtx.destination);
+                    osc.start();
+                    osc.stop(audioCtx.currentTime + 0.45);
+                }
+            } catch (e) {
+                console.log("Audio waiting for user gesture", e);
+            }
+        }
+
+        const rawQuestions = [
+            // ERROR IDENTIFICATION
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "1. Drug <u>trafficking</u>(A) is a matter of <u>considerate</u>(B) concern <u>for</u>(C) the entire international <u>community</u>(D).",
+                options: [
+                    { text: "considerate", correct: true },
+                    { text: "community", correct: false },
+                    { text: "trafficking", correct: false },
+                    { text: "for", correct: false }
+                ],
+                explanation: {
+                    translation: "Nạn buôn bán ma túy là một mối lo ngại lớn/đáng kể đối với toàn bộ cộng đồng quốc tế.",
+                    optionsDict: [
+                        "A. considerate -> Sửa thành 'considerable' (đáng kể, lớn lao)",
+                        "B. community (Đúng)",
+                        "C. trafficking (Đúng)",
+                        "D. for (Đúng)"
+                    ],
+                    whyCorrect: "Cụm danh từ: `a matter of considerable concern` = mối lo ngại lớn. 'Considerate' có nghĩa là ân cần, chu đáo.",
+                    whyIncorrect: "B, C, D sử dụng đúng cấu trúc ngữ pháp."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "2. Gas <u>was</u>(A) detected <u>in</u>(B) sufficient <u>quality</u>(C) to warrant <u>careful</u>(D) monitoring.",
+                options: [
+                    { text: "was", correct: false },
+                    { text: "in", correct: false },
+                    { text: "quality", correct: true },
+                    { text: "careful", correct: false }
+                ],
+                explanation: {
+                    translation: "Khí gas được phát hiện với số lượng đủ lớn để cần phải theo dõi cẩn thận.",
+                    optionsDict: [
+                        "A. was (Đúng)",
+                        "B. in (Đúng)",
+                        "C. quality -> Sửa thành 'quantity' (in sufficient quantity = với số lượng đủ lớn)",
+                        "D. careful (Đúng)"
+                    ],
+                    whyCorrect: "Ý câu muốn nói về số lượng khí gas, do đó phải dùng `quantity` (số lượng) thay vì `quality` (chất lượng).",
+                    whyIncorrect: "A, B, D dùng chính xác ngữ cảnh."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "3. Mr. Nixon may well <u>have had</u>(A) a no-holds-barred <u>approach</u>(B) to dealing <u>in</u>(C) political <u>adversaries</u>(D).",
+                options: [
+                    { text: "approach", correct: false },
+                    { text: "have had", correct: false },
+                    { text: "in", correct: true },
+                    { text: "adversaries", correct: false }
+                ],
+                explanation: {
+                    translation: "Ông Nixon có thể đã có một phương pháp không nương tay khi đối phó với các đối thủ chính trị.",
+                    optionsDict: [
+                        "A. approach (Đúng)",
+                        "B. have had (Đúng)",
+                        "C. in -> Sửa thành 'with' (deal with somebody = đối phó/giải quyết với ai)",
+                        "D. adversaries (Đúng)"
+                    ],
+                    whyCorrect: "Phrasal verb: `deal with somebody` = đối phó/xử lý ai đó. 'Deal in' mang nghĩa là buôn bán mặt hàng gì.",
+                    whyIncorrect: "A, B, D đúng chức năng."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "4. For my <u>cash</u>(A), Sunday is the <u>best day</u>(B) <u>to travel</u>(C) because <u>the</u>(D) roads are quiet.",
+                options: [
+                    { text: "best day", correct: false },
+                    { text: "cash", correct: true },
+                    { text: "to travel", correct: false },
+                    { text: "the", correct: false }
+                ],
+                explanation: {
+                    translation: "Theo ý kiến của tôi, Chủ nhật là ngày tốt nhất để đi lại vì đường xá vắng vẻ.",
+                    optionsDict: [
+                        "A. best day (Đúng)",
+                        "B. cash -> Sửa thành 'money' (For my money = Theo quan điểm/ý kiến của tôi)",
+                        "C. to travel (Đúng)",
+                        "D. the (Đúng)"
+                    ],
+                    whyCorrect: "Thành ngữ: `For my money` = Theo ý kiến / quan điểm cá nhân của tôi.",
+                    whyIncorrect: "A, C, D sử dụng đúng."
+                }
+            },
+            {
+                type: "ERROR IDENTIFICATION",
+                question: "5. He travelled <u>throughout</u>(A) Latin America <u>drawing up</u>(B) support <u>for</u>(C) the <u>confederation</u>(D).",
+                options: [
+                    { text: "confederation", correct: false },
+                    { text: "throughout", correct: false },
+                    { text: "for", correct: false },
+                    { text: "drawing up", correct: true }
+                ],
+                explanation: {
+                    translation: "Anh ấy đã đi khắp Mỹ Latinh để vận động sự ủng hộ cho liên minh.",
+                    optionsDict: [
+                        "A. confederation (Đúng)",
+                        "B. throughout (Đúng)",
+                        "C. for (Đúng)",
+                        "D. drawing up -> Sửa thành 'drumming up' (drum up support = vận động/kêu gọi sự ủng hộ)"
+                    ],
+                    whyCorrect: "Phrasal verb: `drum up support` = kêu gọi, vận động sự ủng hộ từ mọi người.",
+                    whyIncorrect: "A, B, C đúng ngữ pháp."
+                }
+            },
+
+            // PHRASES, COLLOCATIONS AND IDIOMS
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "6. It is estimated that 5,000 bank staff could be ________ their own pockets from customer accounts.",
+                options: [
+                    { text: "lining", correct: true },
+                    { text: "crossing", correct: false },
+                    { text: "writing", correct: false },
+                    { text: "noting", correct: false }
+                ],
+                explanation: {
+                    translation: "Ước tính có khoảng 5.000 nhân viên ngân hàng có thể đang tư lợi/vơ vét cho túi riêng từ tài khoản của khách hàng.",
+                    optionsDict: [
+                        "A. lining (line one's pockets = đút túi riêng/tham nhũng)",
+                        "B. crossing",
+                        "C. writing",
+                        "D. noting"
+                    ],
+                    whyCorrect: "Thành ngữ: `line one's own pockets` = đút túi riêng, làm giàu bất chính.",
+                    whyIncorrect: "B, C, D sai thành ngữ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "7. The sanctions have dealt a severe ________ to the local tourism industry.",
+                options: [
+                    { text: "gust", correct: false },
+                    { text: "blow", correct: true },
+                    { text: "breeze", correct: false },
+                    { text: "storm", correct: false }
+                ],
+                explanation: {
+                    translation: "Các lệnh trừng phạt đã giáng một đòn nặng nề vào ngành du lịch địa phương.",
+                    optionsDict: [
+                        "A. gust (cơn gió mạnh)",
+                        "B. blow (deal a blow = giáng đòn nốc ao/gây tổn thất lớn)",
+                        "C. breeze (gió nhẹ)",
+                        "D. storm (cơn bão)"
+                    ],
+                    whyCorrect: "Thành ngữ: `deal a blow to something` = giáng một đòn nặng nề/gây tác hại lớn cho cái gì.",
+                    whyIncorrect: "A, C, D sai collocation."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "8. If two people ________ halves, they divide the cost of something equally between them.",
+                options: [
+                    { text: "split", correct: false },
+                    { text: "cut", correct: false },
+                    { text: "do", correct: false },
+                    { text: "go", correct: true }
+                ],
+                explanation: {
+                    translation: "Nếu hai người chia đôi chi phí, họ chia đều tiền trả cho thứ gì đó.",
+                    optionsDict: [
+                        "A. split",
+                        "B. cut",
+                        "C. do",
+                        "D. go (go halves = chia đôi tiền/chi phí)"
+                    ],
+                    whyCorrect: "Thành ngữ: `go halves` = chia đôi chi phí sòng phẳng.",
+                    whyIncorrect: "A, B, C không ghép với 'halves' thành idiom này."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "9. The results fell ________ of eight analysts' forecasts of profit between 130 million and 127 million pounds.",
+                options: [
+                    { text: "brief", correct: false },
+                    { text: "short", correct: true },
+                    { text: "little", correct: false },
+                    { text: "bare", correct: false }
+                ],
+                explanation: {
+                    translation: "Kết quả thu về đã không đạt tới dự báo lợi nhuận của 8 nhà phân tích.",
+                    optionsDict: [
+                        "A. brief",
+                        "B. short (fall short of = không đạt tới/thấp hơn kỳ vọng)",
+                        "C. little",
+                        "D. bare"
+                    ],
+                    whyCorrect: "Cụm động từ: `fall short of something` = không đạt tới tiêu chuẩn/dự đoán.",
+                    whyIncorrect: "A, C, D sai thành ngữ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "10. Don't ________ such a big thing about missing the bus: there'll be another one along in a minute.",
+                options: [
+                    { text: "make", correct: true },
+                    { text: "take", correct: false },
+                    { text: "put", correct: false },
+                    { text: "gain", correct: false }
+                ],
+                explanation: {
+                    translation: "Đừng làm quá chuyện lỡ xe buýt lên thế: sẽ có chuyến khác đến trong một phút nữa thôi.",
+                    optionsDict: [
+                        "A. make (make a big thing about sth = xé ra to / làm chuyện lớn)",
+                        "B. take",
+                        "C. put",
+                        "D. gain"
+                    ],
+                    whyCorrect: "Collocation: `make a big thing about/of something` = làm quan trọng hóa vấn đề/chuyện bé xé ra to.",
+                    whyIncorrect: "B, C, D sai động từ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "11. Unfortunately, I have a lot ________ this weekend, so I can't hang out.",
+                options: [
+                    { text: "for", correct: false },
+                    { text: "at", correct: false },
+                    { text: "on", correct: true },
+                    { text: "into", correct: false }
+                ],
+                explanation: {
+                    translation: "Thật không may, cuối tuần này tôi có quá nhiều việc phải làm nên không thể đi chơi được.",
+                    optionsDict: [
+                        "A. for",
+                        "B. at",
+                        "C. on (have a lot on = bận rộn/có nhiều việc phải lo)",
+                        "D. into"
+                    ],
+                    whyCorrect: "Thành ngữ: `have a lot on` = có rất nhiều việc phải làm / rất bận rộn.",
+                    whyIncorrect: "A, B, D sai giới từ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "12. It seems a lot of effort but I'm sure it's the best solution in the long ________.",
+                options: [
+                    { text: "walk", correct: false },
+                    { text: "crawl", correct: false },
+                    { text: "jog", correct: false },
+                    { text: "run", correct: true }
+                ],
+                explanation: {
+                    translation: "Có vẻ tốn nhiều công sức nhưng tôi chắc chắn đó là giải pháp tốt nhất về lâu về dài.",
+                    optionsDict: [
+                        "A. walk",
+                        "B. crawl",
+                        "C. jog",
+                        "D. run (in the long run = về lâu về dài)"
+                    ],
+                    whyCorrect: "Cụm từ cố định: `in the long run` = xét về mặt lâu dài.",
+                    whyIncorrect: "A, B, C không ghép với 'in the long'."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "13. If someone does something ________ length, they do it for a long time or in great detail.",
+                options: [
+                    { text: "at", correct: true },
+                    { text: "in", correct: false },
+                    { text: "on", correct: false },
+                    { text: "for", correct: false }
+                ],
+                explanation: {
+                    translation: "Nếu ai đó làm điều gì đó một cách chi tiết/dài dòng, họ làm trong thời gian dài hoặc cực kỳ tỉ mỉ.",
+                    optionsDict: [
+                        "A. at (at length = chi tiết / thời gian dài)",
+                        "B. in",
+                        "C. on",
+                        "D. for"
+                    ],
+                    whyCorrect: "Cụm từ cố định: `at length` = trong thời gian dài / chi tiết kỹ lưỡng.",
+                    whyIncorrect: "B, C, D sai giới từ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "14. 'Would your car be easy to steal?' - 'Fat ________! I've got a device that shuts down the ignition.'",
+                options: [
+                    { text: "chance", correct: true },
+                    { text: "opportunity", correct: false },
+                    { text: "occasion", correct: false },
+                    { text: "option", correct: false }
+                ],
+                explanation: {
+                    translation: "'Xe của bạn có dễ bị trộm không?' - 'Không đời nào! Tôi có thiết bị ngắt hệ thống đánh lửa rồi.'",
+                    optionsDict: [
+                        "A. chance (Fat chance! = Không đời nào / Khó xảy ra lắm)",
+                        "B. opportunity",
+                        "C. occasion",
+                        "D. option"
+                    ],
+                    whyCorrect: "Thành ngữ: `Fat chance!` = Còn lâu mới có chuyện đó / Không đời nào!",
+                    whyIncorrect: "B, C, D không đi với 'Fat' tạo cảm thán này."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "15. ________ the government is starting to listen to our problems.",
+                options: [
+                    { text: "All day", correct: false },
+                    { text: "At long last", correct: true },
+                    { text: "As long as", correct: false },
+                    { text: "In the long term", correct: false }
+                ],
+                explanation: {
+                    translation: "Cuối cùng thì chính phủ cũng bắt đầu lắng nghe các vấn đề của chúng ta.",
+                    optionsDict: [
+                        "A. All day (Cả ngày)",
+                        "B. At long last (Rốt cuộc/Cuối cùng sau thời gian dài chờ đợi)",
+                        "C. As long as (Miễn là)",
+                        "D. In the long term (Về lâu dài)"
+                    ],
+                    whyCorrect: "Thành ngữ: `At long last` = Cuối cùng thì (sau bao lâu chờ đợi).",
+                    whyIncorrect: "A, C, D không diễn tả sự thở phào vì chờ đợi lâu."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "16. If you abuse your body now, you'll pay the ________ when you're older.",
+                options: [
+                    { text: "money", correct: false },
+                    { text: "cash", correct: false },
+                    { text: "cost", correct: false },
+                    { text: "price", correct: true }
+                ],
+                explanation: {
+                    translation: "Nếu bạn tàn phá cơ thể bây giờ, bạn sẽ phải trả giá khi về già.",
+                    optionsDict: [
+                        "A. money",
+                        "B. cash",
+                        "C. cost",
+                        "D. price (pay the price = trả giá cho sai lầm)"
+                    ],
+                    whyCorrect: "Thành ngữ: `pay the price` = gánh chịu hậu quả/trả giá cho hành động sai lầm.",
+                    whyIncorrect: "A, B, C không tạo idiom này."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "17. The thought of kissing him made me go ________.",
+                options: [
+                    { text: "weak at the knees", correct: true },
+                    { text: "thin on the ground", correct: false },
+                    { text: "rich and famous", correct: false },
+                    { text: "at large", correct: false }
+                ],
+                explanation: {
+                    translation: "Ý nghĩ hôn anh ấy khiến tôi bủn rủn cả chân tay.",
+                    optionsDict: [
+                        "A. weak at the knees (bủn rủn chân tay vì quá yêu/xúc động)",
+                        "B. thin on the ground (hiếm hoi)",
+                        "C. rich and famous (giàu có nổi tiếng)",
+                        "D. at large (nhởn nhơ ngoài vòng pháp luật)"
+                    ],
+                    whyCorrect: "Thành ngữ: `go weak at the knees` = run rẩy, bủn rủn chân tay vì cảm xúc quá mạnh mẽ.",
+                    whyIncorrect: "B, C, D sai nghĩa hoàn toàn."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "18. You must be exhausted after all that shopping - take a load off your ________!",
+                options: [
+                    { text: "head", correct: false },
+                    { text: "hand", correct: false },
+                    { text: "feet", correct: true },
+                    { text: "arm", correct: false }
+                ],
+                explanation: {
+                    translation: "Cậu chắc kiệt sức sau khi đi mua sắm rồi - ngồi xuống nghỉ ngơi cho đỡ mỏi chân đi!",
+                    optionsDict: [
+                        "A. head",
+                        "B. hand",
+                        "C. feet (take a load off your feet = ngồi xuống nghỉ ngơi)",
+                        "D. arm"
+                    ],
+                    whyCorrect: "Thành ngữ: `take a load off one's feet` = ngồi xuống thư giãn đôi chân sau khi đi đứng lâu.",
+                    whyIncorrect: "A, B, D sai danh từ bộ phận cơ thể."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "19. He criticized her in front of her colleagues and made her feel very ________.",
+                options: [
+                    { text: "high", correct: false },
+                    { text: "small", correct: true },
+                    { text: "long", correct: false },
+                    { text: "tall", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ta chỉ trích cô ấy trước mặt đồng nghiệp và làm cô cảm thấy rất nhỏ bé / xấu hổ.",
+                    optionsDict: [
+                        "A. high",
+                        "B. small (make sb feel small = làm ai cảm thấy xấu hổ/nhỏ bé)",
+                        "C. long",
+                        "D. tall"
+                    ],
+                    whyCorrect: "Thành ngữ: `make somebody feel small` = làm ai cảm thấy tự ti, ngượng ngùng, bị coi thường.",
+                    whyIncorrect: "A, C, D không ghép tạo idiom này."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "20. She and her companions had just come from Covent Garden and they were all ________ high spirits and looking forward to dinner.",
+                options: [
+                    { text: "with", correct: false },
+                    { text: "in", correct: true },
+                    { text: "for", correct: false },
+                    { text: "at", correct: false }
+                ],
+                explanation: {
+                    translation: "Cô ấy và các bạn đồng hành vừa trở về từ Covent Garden và tất cả họ đều đang trong tâm trạng vô cùng phấn khởi mong chờ bữa tối.",
+                    optionsDict: [
+                        "A. with",
+                        "B. in (in high spirits = tâm trạng hào hứng/vui vẻ)",
+                        "C. for",
+                        "D. at"
+                    ],
+                    whyCorrect: "Thành ngữ: `be in high spirits` = có tâm trạng hết sức vui vẻ, hào hứng.",
+                    whyIncorrect: "A, C, D sai giới từ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "21. The pleasure principle should motivate the programmes of study, and always be given ________ priority.",
+                options: [
+                    { text: "high", correct: true },
+                    { text: "upper", correct: false },
+                    { text: "steep", correct: false },
+                    { text: "giant", correct: false }
+                ],
+                explanation: {
+                    translation: "Nguyên tắc tạo niềm vui nên là động lực cho các chương trình học và luôn phải được dành ưu tiên hàng đầu.",
+                    optionsDict: [
+                        "A. high (high priority = ưu tiên cao)",
+                        "B. upper",
+                        "C. steep",
+                        "D. giant"
+                    ],
+                    whyCorrect: "Collocation: `give high priority to something` = đặt ưu tiên cao/hàng đầu cho điều gì.",
+                    whyIncorrect: "B, C, D sai tính từ đi với 'priority'."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "22. That red is an ________ lot brighter than the color of your house.",
+                options: [
+                    { text: "shocking", correct: false },
+                    { text: "dreadful", correct: false },
+                    { text: "terrible", correct: false },
+                    { text: "awful", correct: true }
+                ],
+                explanation: {
+                    translation: "Màu đỏ đó sặc sỡ hơn màu nhà bạn rất nhiều.",
+                    optionsDict: [
+                        "A. shocking",
+                        "B. dreadful",
+                        "C. terrible",
+                        "D. awful (an awful lot = rất nhiều)"
+                    ],
+                    whyCorrect: "Thành ngữ: `an awful lot` dùng để nhấn mạnh tính từ so sánh hơn ('brighter') = sáng hơn rất nhiều.",
+                    whyIncorrect: "A, B, C không ghép đi với 'lot'."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "23. Don't keep all those chocolates to yourself - share and share ________.",
+                options: [
+                    { text: "unlike", correct: false },
+                    { text: "like", correct: false },
+                    { text: "alike", correct: true },
+                    { text: "liking", correct: false }
+                ],
+                explanation: {
+                    translation: "Đừng giữ hết số sô-cô-la đó cho riêng mình - hãy chia đều cho mọi người cùng hưởng thụ nào.",
+                    optionsDict: [
+                        "A. unlike",
+                        "B. like",
+                        "C. alike (share and share alike = chia đều sòng phẳng)",
+                        "D. liking"
+                    ],
+                    whyCorrect: "Thành ngữ: `share and share alike` = chia sẻ đều đặn, bằng nhau.",
+                    whyIncorrect: "A, B, D sai từ loại thành ngữ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "24. Magazines about home improvement were very thin ________ at the time - not like now.",
+                options: [
+                    { text: "on the ground", correct: true },
+                    { text: "on the mountain", correct: false },
+                    { text: "on the floor", correct: false },
+                    { text: "on the top", correct: false }
+                ],
+                explanation: {
+                    translation: "Các tạp chí cải tạo nhà cửa hồi đó vô cùng hiếm hoi - không giống như bây giờ.",
+                    optionsDict: [
+                        "A. on the ground (thin on the ground = hiếm hoi, ít có)",
+                        "B. on the mountain",
+                        "C. on the floor",
+                        "D. on the top"
+                    ],
+                    whyCorrect: "Thành ngữ: `thin on the ground` = hiếm có, tồn tại với số lượng rất ít.",
+                    whyIncorrect: "B, C, D sai thành ngữ."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "25. He has such a thin ________ that he can't even take a little good-natured teasing.",
+                options: [
+                    { text: "head", correct: false },
+                    { text: "face", correct: false },
+                    { text: "skin", correct: true },
+                    { text: "nose", correct: false }
+                ],
+                explanation: {
+                    translation: "Anh ấy dễ tự ái đến mức thậm chí không chịu nổi một lời trêu đùa vô tư.",
+                    optionsDict: [
+                        "A. head",
+                        "B. face",
+                        "C. skin (have a thin skin = dễ tự ái / nhạy cảm quá mức)",
+                        "D. nose"
+                    ],
+                    whyCorrect: "Thành ngữ: `have a thin skin` = nhạy cảm quá mức, dễ bị tổn thương/tự ái trước lời nhận xét.",
+                    whyIncorrect: "A, B, D không ghép tạo idiom này."
+                }
+            },
+            {
+                type: "PHRASES, COLLOCATIONS AND IDIOMS",
+                question: "26. You may very well be asked what your weak ________ are. Don't try to claim you don't have any.",
+                options: [
+                    { text: "points", correct: true },
+                    { text: "marks", correct: false },
+                    { text: "grades", correct: false },
+                    { text: "scores", correct: false }
+                ],
+                explanation: {
+                    translation: "Rất có thể bạn sẽ được hỏi điểm yếu của bạn là gì. Đừng cố khẳng định rằng mình không có điểm yếu nào.",
+                    optionsDict: [
+                        "A. points (weak points = điểm yếu / nhược điểm)",
+                        "B. marks",
+                        "C. grades",
+                        "D. scores"
+                    ],
+                    whyCorrect: "Collocation: `weak points` = các điểm yếu, nhược điểm cá nhân.",
+                    whyIncorrect: "B, C, D mang nghĩa điểm số bài thi."
+                }
+            },
+
+            // VOCABULARY IN CONTRAST
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "27. There is ________ evidence that competition from alternative providers improves the performance of the existing public sector.",
+                options: [
+                    { text: "average", correct: false },
+                    { text: "ample", correct: true },
+                    { text: "finite", correct: false },
+                    { text: "minute", correct: false }
+                ],
+                explanation: {
+                    translation: "Có đầy đủ bằng chứng cho thấy sự cạnh tranh từ các nhà cung cấp thay thế cải thiện hiệu suất của khu vực công hiện tại.",
+                    optionsDict: [
+                        "A. average (Trung bình)",
+                        "B. ample (ample evidence = bằng chứng phong phú/dư dả)",
+                        "C. finite (Hạn hẹp)",
+                        "D. minute (Cực nhỏ)"
+                    ],
+                    whyCorrect: "Collocation: `ample evidence` = có vô số/đầy đủ bằng chứng rõ ràng.",
+                    whyIncorrect: "A, C, D sai nét nghĩa đầy đủ."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "28. Communication via the internet gives an important international ________ to the project.",
+                options: [
+                    { text: "magnitude", correct: false },
+                    { text: "function", correct: false },
+                    { text: "dimension", correct: true },
+                    { text: "imbalance", correct: false }
+                ],
+                explanation: {
+                    translation: "Giao tiếp qua internet mang lại một khía cạnh quốc tế quan trọng cho dự án.",
+                    optionsDict: [
+                        "A. magnitude (Mức độ)",
+                        "B. function (Chức năng)",
+                        "C. dimension (n: khía cạnh, quy mô chiều hướng)",
+                        "D. imbalance (Sự mất cân bằng)"
+                    ],
+                    whyCorrect: "Danh từ `dimension` = khía cạnh, chiều hướng phát triển ('international dimension' = khía cạnh quốc tế).",
+                    whyIncorrect: "A, B, D sai nét nghĩa khía cạnh."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "29. Most people walk at an average ________ of five kilometres an hour.",
+                options: [
+                    { text: "rate", correct: true },
+                    { text: "quantity", correct: false },
+                    { text: "fraction", correct: false },
+                    { text: "ratio", correct: false }
+                ],
+                explanation: {
+                    translation: "Hầu hết mọi người đi bộ với tốc độ trung bình là 5 km/giờ.",
+                    optionsDict: [
+                        "A. rate (at an average rate of = tốc độ trung bình)",
+                        "B. quantity (Số lượng)",
+                        "C. fraction (Phân số)",
+                        "D. ratio (Tỷ lệ)"
+                    ],
+                    whyCorrect: "Collocation: `at an average rate of...` = với tốc độ/tỷ lệ di chuyển trung bình.",
+                    whyIncorrect: "B, C, D sai ngữ cảnh đi bộ km/h."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "30. The employer has a duty to pay full ________ for injuries received at work.",
+                options: [
+                    { text: "debt", correct: false },
+                    { text: "compensation", correct: true },
+                    { text: "benefit", correct: false },
+                    { text: "pension", correct: false }
+                ],
+                explanation: {
+                    translation: "Người sử dụng lao động có nghĩa vụ chi trả tiền bồi thường đầy đủ cho các chấn thương phải chịu tại nơi làm việc.",
+                    optionsDict: [
+                        "A. debt (Món nợ)",
+                        "B. compensation (n: tiền bồi thường tai nạn/thiệt hại)",
+                        "C. benefit (Phúc lợi)",
+                        "D. pension (Lương hưu)"
+                    ],
+                    whyCorrect: "Danh từ `compensation` = khoản tiền bồi thường thiệt hại/chấn thương.",
+                    whyIncorrect: "A, C, D không đúng nghĩa tiền bồi thường chấn thương."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "31. New roads are being built to cope with the increased ________ of traffic.",
+                options: [
+                    { text: "rate", correct: false },
+                    { text: "ratio", correct: false },
+                    { text: "ration", correct: false },
+                    { text: "volume", correct: true }
+                ],
+                explanation: {
+                    translation: "Các con đường mới đang được xây dựng để ứng phó với lưu lượng giao thông ngày càng tăng.",
+                    optionsDict: [
+                        "A. rate",
+                        "B. ratio",
+                        "C. ration",
+                        "D. volume (volume of traffic = lưu lượng giao thông)"
+                    ],
+                    whyCorrect: "Collocation: `volume of traffic` = lưu lượng xe cộ qua lại trên đường.",
+                    whyIncorrect: "A, B, C không ghép thành lưu lượng giao thông."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "32. It is necessary to make new ________ of flu vaccine whenever a different, virulent strain of flu makes an appearance.",
+                options: [
+                    { text: "collections", correct: false },
+                    { text: "qualities", correct: false },
+                    { text: "batches", correct: true },
+                    { text: "bundles", correct: false }
+                ],
+                explanation: {
+                    translation: "Cần phải sản xuất các lô vắc-xin cúm mới bất cứ khi nào xuất hiện một chủng cúm nguy hiểm khác.",
+                    optionsDict: [
+                        "A. collections (Bộ sưu tập)",
+                        "B. qualities (Chất lượng)",
+                        "C. batches (n: lô hàng, đợt sản xuất vắc-xin)",
+                        "D. bundles (Bó)"
+                    ],
+                    whyCorrect: "Danh từ `batch` = lô sản xuất vắc-xin/dược phẩm.",
+                    whyIncorrect: "A, B, D sai danh từ định lượng vắc-xin."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "33. All points on a circle are ________ from the centre.",
+                options: [
+                    { text: "equidistant", correct: true },
+                    { text: "central", correct: false },
+                    { text: "equal", correct: false },
+                    { text: "middle", correct: false }
+                ],
+                explanation: {
+                    translation: "Tất cả các điểm trên một đường tròn đều cách đều tâm.",
+                    optionsDict: [
+                        "A. equidistant (adj: cách đều nhau)",
+                        "B. central (Ở trung tâm)",
+                        "C. equal (Bằng nhau)",
+                        "D. middle (Ở giữa)"
+                    ],
+                    whyCorrect: "Tính từ toán học: `equidistant from...` = cách đều một điểm cố định.",
+                    whyIncorrect: "B, C, D sai thuật ngữ khoảng cách hình học."
+                }
+            },
+            {
+                type: "VOCABULARY IN CONTRAST",
+                question: "34. They have launched an investigation to determine the ________ of police misconduct in this case.",
+                options: [
+                    { text: "extent", correct: true },
+                    { text: "amplitude", correct: false },
+                    { text: "expansion", correct: false },
+                    { text: "duration", correct: false }
+                ],
+                explanation: {
+                    translation: "Họ đã mở một cuộc điều tra để xác định mức độ sai phạm của cảnh sát trong vụ án này.",
+                    optionsDict: [
+                        "A. extent (extent of misconduct = mức độ sai phạm)",
+                        "B. amplitude (Biên độ)",
+                        "C. expansion (Sự mở rộng)",
+                        "D. duration (Thời lượng)"
+                    ],
+                    whyCorrect: "Cụm danh từ: `extent of something` = quy mô, phạm vi, mức độ nghiêm trọng của hành vi.",
+                    whyIncorrect: "B, C, D không chỉ mức độ vi phạm."
+                }
+            },
+
+            // PHRASAL VERBS
+            {
+                type: "PHRASAL VERBS",
+                question: "35. The changes in air quality are small, but after a while they ________ and affect people's health.",
+                options: [
+                    { text: "put up for", correct: false },
+                    { text: "add up", correct: true },
+                    { text: "get up to", correct: false },
+                    { text: "hit up for", correct: false }
+                ],
+                explanation: {
+                    translation: "Những thay đổi về chất lượng không khí là rất nhỏ, nhưng sau một thời gian chúng tích tụ lại và ảnh hưởng tới sức khỏe con người.",
+                    optionsDict: [
+                        "A. put up for",
+                        "B. add up (v: cộng dồn lại / tích tụ dần dần)",
+                        "C. get up to",
+                        "D. hit up for"
+                    ],
+                    whyCorrect: "Phrasal verb: `add up` = cộng dồn lại thành số lượng lớn theo thời gian.",
+                    whyIncorrect: "A, C, D sai nghĩa tích tụ."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "36. A well-known business executive had bought ________ government inspectors.",
+                options: [
+                    { text: "into", correct: false },
+                    { text: "up", correct: false },
+                    { text: "out", correct: false },
+                    { text: "off", correct: true }
+                ],
+                explanation: {
+                    translation: "Một giám đốc doanh nghiệp nổi tiếng đã đút lót/mua chuộc các thanh tra chính phủ.",
+                    optionsDict: [
+                        "A. into",
+                        "B. up",
+                        "C. out",
+                        "D. off (buy off = đút lót, mua chuộc ai bằng tiền)"
+                    ],
+                    whyCorrect: "Phrasal verb: `buy off somebody` = đút lót tiền để mua sự im lặng hoặc thiên vị.",
+                    whyIncorrect: "A, B, C không chỉ hành vi hối lộ."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "37. The Australians have ________ three gold medals and two silvers in the swimming events.",
+                options: [
+                    { text: "bought up", correct: false },
+                    { text: "mounted up", correct: false },
+                    { text: "clocked up", correct: true },
+                    { text: "drummed up", correct: false }
+                ],
+                explanation: {
+                    translation: "Đoàn Úc đã đạt được 3 huy chương vàng và 2 huy chương bạc trong các nội dung bơi lội.",
+                    optionsDict: [
+                        "A. bought up (Thu mua hết)",
+                        "B. mounted up (Gia tăng)",
+                        "C. clocked up (v: ghi được / đạt được thành tích)",
+                        "D. drummed up (Huy động)"
+                    ],
+                    whyCorrect: "Phrasal verb: `clock up` = đạt được con số hoặc thành tích nhất định trong thể thao.",
+                    whyIncorrect: "A, B, D sai ngữ cảnh gặt hái huy chương."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "38. For my thirtieth birthday, my friends ________ and bought me a watch.",
+                options: [
+                    { text: "clubbed together", correct: true },
+                    { text: "broke down", correct: false },
+                    { text: "built up", correct: false },
+                    { text: "came out", correct: false }
+                ],
+                explanation: {
+                    translation: "Vào sinh nhật lần thứ 30 của tôi, các bạn tôi đã hùn tiền lại cùng mua cho tôi một chiếc đồng hồ.",
+                    optionsDict: [
+                        "A. clubbed together (v: quyên góp / hùn tiền cùng mua quà)",
+                        "B. broke down (Hỏng hóc)",
+                        "C. built up (Xây dựng)",
+                        "D. came out (Ra mắt)"
+                    ],
+                    whyCorrect: "Phrasal verb: `club together` = cùng góp tiền mua chung một món đồ.",
+                    whyIncorrect: "B, C, D sai nghĩa quyên góp tiền."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "39. She checked her bags because she didn't want to be ________.",
+                options: [
+                    { text: "got down", correct: false },
+                    { text: "let down", correct: false },
+                    { text: "put down", correct: false },
+                    { text: "weighed down", correct: true }
+                ],
+                explanation: {
+                    translation: "Cô ấy ký gửi hành lý vì không muốn bị đè nặng / cồng kềnh khi di chuyển.",
+                    optionsDict: [
+                        "A. got down",
+                        "B. let down (Thất vọng)",
+                        "C. put down",
+                        "D. weighed down (be weighed down = bị đè nặng/cồng kềnh bởi hành lý)"
+                    ],
+                    whyCorrect: "Phrasal verb: `be weighed down` = bị gánh nặng hành lý đè trĩu gạt đi sự linh hoạt.",
+                    whyIncorrect: "A, B, C sai nghĩa đè nặng."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "40. In prison they'd ________ his watch and everything he possessed.",
+                options: [
+                    { text: "taken away", correct: true },
+                    { text: "got away", correct: false },
+                    { text: "thrown away", correct: false },
+                    { text: "put away", correct: false }
+                ],
+                explanation: {
+                    translation: "Trong tù, họ đã tước đoạt/lấy đi chiếc đồng hồ và mọi thứ anh ấy sở hữu.",
+                    optionsDict: [
+                        "A. taken away (take away = tước đoạt / tịch thu)",
+                        "B. got away (Tẩu thoát)",
+                        "C. thrown away (Vứt đi)",
+                        "D. put away (Cất đi)"
+                    ],
+                    whyCorrect: "Phrasal verb: `take away` = tịch thu, lấy đi tài sản cá nhân.",
+                    whyIncorrect: "B, C, D sai ngữ cảnh tịch thu tài sản phạm nhân."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "41. The sea defences have been ________ to ensure that such a disaster will not strike again.",
+                options: [
+                    { text: "bought up", correct: false },
+                    { text: "built up", correct: true },
+                    { text: "clocked up", correct: false },
+                    { text: "drummed up", correct: false }
+                ],
+                explanation: {
+                    translation: "Hệ thống đê biển đã được củng cố/xây dựng kiên cố để đảm bảo rằng thảm họa như vậy sẽ không xảy ra lần nữa.",
+                    optionsDict: [
+                        "A. bought up",
+                        "B. built up (built up = củng cố / tăng cường kiên cố)",
+                        "C. clocked up",
+                        "D. drummed up"
+                    ],
+                    whyCorrect: "Phrasal verb: `build up` = củng cố, tăng cường sức mạnh/độ kiên cố.",
+                    whyIncorrect: "A, C, D không chỉ việc củng cố đê kè."
+                }
+            },
+            {
+                type: "PHRASAL VERBS",
+                question: "42. I try not to let my problems at work ________ into my private life.",
+                options: [
+                    { text: "come up", correct: false },
+                    { text: "mount up", correct: false },
+                    { text: "carry over", correct: true },
+                    { text: "start up", correct: false }
+                ],
+                explanation: {
+                    translation: "Tôi cố gắng không để những rắc rối ở chỗ làm ảnh hưởng/lan sang đời sống riêng tư của mình.",
+                    optionsDict: [
+                        "A. come up",
+                        "B. mount up",
+                        "C. carry over (carry over into = ảnh hưởng/lan sang lĩnh vực khác)",
+                        "D. start up"
+                    ],
+                    whyCorrect: "Phrasal verb: `carry over into something` = lan sang, ảnh hưởng sang hoàn cảnh khác.",
+                    whyIncorrect: "A, B, D sai nghĩa lan truyền ảnh hưởng."
+                }
+            },
+
+            // SYNONYM
+            {
+                type: "SYNONYM",
+                question: "43. We've seen our house <b>diminish</b> substantially in value over the last six months.",
+                options: [
+                    { text: "reduce", correct: true },
+                    { text: "increase", correct: false },
+                    { text: "escalate", correct: false },
+                    { text: "boost", correct: false }
+                ],
+                explanation: {
+                    translation: "Chúng tôi đã chứng kiến ngôi nhà của mình giảm giá trị đáng kể trong 6 tháng qua.",
+                    optionsDict: [
+                        "A. reduce (v: giảm bớt - Đồng nghĩa)",
+                        "B. increase (Tăng)",
+                        "C. escalate (Leo thang)",
+                        "D. boost (Thúc đẩy)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `diminish` (suy giảm, giảm bớt) = `reduce`.",
+                    whyIncorrect: "B, C, D là các từ trái nghĩa."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "44. They need to raise thousands of pounds for this project, so our 20-pound donation is just <b>a drop in the ocean</b>.",
+                options: [
+                    { text: "a large amount", correct: false },
+                    { text: "a small amount", correct: true },
+                    { text: "a huge amount", correct: false },
+                    { text: "a giant amount", correct: false }
+                ],
+                explanation: {
+                    translation: "Họ cần quyên góp hàng ngàn bảng cho dự án này, vì vậy khoản đóng góp 20 bảng của chúng tôi chỉ như muối bỏ bể.",
+                    optionsDict: [
+                        "A. a large amount (Số lượng lớn)",
+                        "B. a small amount (n: một lượng rất nhỏ - Đồng nghĩa)",
+                        "C. a huge amount (Số lượng khổng lồ)",
+                        "D. a giant amount (Số lượng cực lớn)"
+                    ],
+                    whyCorrect: "Thành ngữ: `a drop in the ocean` = muối bỏ bể / số lượng nhỏ không đáng kể (`a small amount`).",
+                    whyIncorrect: "A, C, D ngược nghĩa."
+                }
+            },
+            {
+                type: "SYNONYM",
+                question: "45. When we know how much is profit, then we can <b>apportion</b> the money between us.",
+                options: [
+                    { text: "divide", correct: true },
+                    { text: "multiply", correct: false },
+                    { text: "add", correct: false },
+                    { text: "withdraw", correct: false }
+                ],
+                explanation: {
+                    translation: "Khi chúng ta biết lợi nhuận là bao nhiêu, chúng ta có thể chia số tiền đó giữa chúng ta.",
+                    optionsDict: [
+                        "A. divide (v: phân chia - Đồng nghĩa)",
+                        "B. multiply (Nhân lên)",
+                        "C. add (Thêm vào)",
+                        "D. withdraw (Rút tiền)"
+                    ],
+                    whyCorrect: "Từ đồng nghĩa: `apportion` (phân chia phần) = `divide`.",
+                    whyIncorrect: "B, C, D sai tính chất chia tiền."
+                }
+            },
+
+            // WORD FORMATIONS
+            {
+                type: "WORD FORMATIONS",
+                question: "46. ________ critics generally disapprove of this type of novel. (HIGH)",
+                options: [
+                    { text: "Highbrow", correct: true },
+                    { text: "Highlight", correct: false },
+                    { text: "Heighten", correct: false },
+                    { text: "Highness", correct: false }
+                ],
+                explanation: {
+                    translation: "Giới phê bình trí thức cao cấp thường không tán thành loại tiểu thuyết này.",
+                    optionsDict: [
+                        "A. Highbrow (adj: trí thức cao cấp / đòi hỏi trí tuệ)",
+                        "B. Highlight (v: làm nổi bật)",
+                        "C. Heighten (v: gia tăng)",
+                        "D. Highness (n: Điện hạ)"
+                    ],
+                    whyCorrect: "Tính từ/Danh từ ghép: `Highbrow critics` = giới phê bình thuộc tầng lớp trí thức/học thuật cao.",
+                    whyIncorrect: "B, C, D sai từ loại ghép."
+                }
+            },
+            {
+                type: "WORD FORMATIONS",
+                question: "47. The authorities conducted an ________ investigation into his tax affairs. (EXTEND)",
+                options: [
+                    { text: "extension", correct: false },
+                    { text: "extent", correct: false },
+                    { text: "extensive", correct: true },
+                    { text: "unextended", correct: false }
+                ],
+                explanation: {
+                    translation: "Các cơ quan chức năng đã tiến hành một cuộc điều tra sâu rộng về công việc thuế của anh ta.",
+                    optionsDict: [
+                        "A. extension (n: sự mở rộng)",
+                        "B. extent (n: quy mô)",
+                        "C. extensive (adj: sâu rộng / trên quy mô lớn)",
+                        "D. unextended"
+                    ],
+                    whyCorrect: "Đứng trước danh từ 'investigation' cần Tính từ `extensive` (điều tra sâu rộng).",
+                    whyIncorrect: "A, B sai từ loại."
+                }
+            },
+            {
+                type: "WORD FORMATIONS",
+                question: "48. Pasta's basic ingredients are flour and water, sometimes with the ________ of eggs or oil. (ADD)",
+                options: [
+                    { text: "addenda", correct: false },
+                    { text: "add", correct: false },
+                    { text: "additive", correct: false },
+                    { text: "addition", correct: true }
+                ],
+                explanation: {
+                    translation: "Thành phần cơ bản của mỳ Ý là bột mì và nước, đôi khi có sự bổ sung thêm trứng hoặc dầu.",
+                    optionsDict: [
+                        "A. addenda (Phụ lục)",
+                        "B. add (Động từ)",
+                        "C. additive (Chất phụ gia)",
+                        "D. addition (n: with the addition of = sự bổ sung thêm)"
+                    ],
+                    whyCorrect: "Cụm danh từ: `with the addition of...` = với sự bổ sung thêm của...",
+                    whyIncorrect: "A, B, C sai nét nghĩa bổ sung thành phần."
+                }
+            },
+
+            // ANTONYM
+            {
+                type: "ANTONYM",
+                question: "49. Although our skin looks smooth, when <b>magnified</b> it is full of bumps and holes.",
+                options: [
+                    { text: "boosted", correct: false },
+                    { text: "enlarged", correct: false },
+                    { text: "increased", correct: false },
+                    { text: "shrunk", correct: true }
+                ],
+                explanation: {
+                    translation: "Mặc dù làn da của chúng ta trông mịn màng, nhưng khi được phóng to thì nó đầy những nốt sần và lỗ hổng.",
+                    optionsDict: [
+                        "A. boosted (Thúc đẩy)",
+                        "B. enlarged (Phóng to - Đồng nghĩa)",
+                        "C. increased (Tăng)",
+                        "D. shrunk (v-ed: thu nhỏ - Trái nghĩa)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `magnified` (được phóng to) >< `shrunk` (bị thu nhỏ).",
+                    whyIncorrect: "B là từ đồng nghĩa."
+                }
+            },
+            {
+                type: "ANTONYM",
+                question: "50. The documentary showed an eye operation in <b>minute</b> detail.",
+                options: [
+                    { text: "light", correct: false },
+                    { text: "heavy", correct: false },
+                    { text: "large", correct: true },
+                    { text: "tiny", correct: false }
+                ],
+                explanation: {
+                    translation: "Bộ phim tài liệu đã chiếu một ca phẫu thuật mắt với chi tiết cực kỳ tỉ mỉ/nhỏ nhặt.",
+                    optionsDict: [
+                        "A. light (Nhẹ)",
+                        "B. heavy (Nặng)",
+                        "C. large (adj: đại quát, lớn - Trái nghĩa)",
+                        "D. tiny (Cực nhỏ - Đồng nghĩa)"
+                    ],
+                    whyCorrect: "Từ trái nghĩa: `minute` (adj: vô cùng nhỏ, tỉ mỉ chi tiết) >< `large` (lớn, đại thể).",
+                    whyIncorrect: "D là từ đồng nghĩa."
+                }
+            }
+        ];
+
+        let questions = [];
+
+        function shuffleArray(array) {
+            let cur = array.slice();
+            for (let i = cur.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [cur[i], cur[j]] = [cur[j], cur[i]];
+            }
+            return cur;
+        }
+
+        function initQuiz() {
+            questions = rawQuestions.map(q => {
+                let shuffledOpts = shuffleArray(q.options);
+                return {
+                    ...q,
+                    shuffledOptions: shuffledOpts,
+                    userAnswerIndex: null
+                };
+            });
+            renderQuiz();
+        }
+
+        function renderQuiz() {
+            const container = document.getElementById('quiz-container');
+            container.innerHTML = '';
+
+            questions.forEach((q, idx) => {
+                const card = document.createElement('div');
+                card.className = 'question-card';
+
+                const optionsHTML = q.shuffledOptions.map((opt, optIdx) => {
+                    const letters = ['A', 'B', 'C', 'D'];
+                    return `
+                        <button class="opt-btn" id="opt-${idx}-${optIdx}" onclick="selectAnswer(${idx}, ${optIdx})">
+                            <span class="opt-prefix">${letters[optIdx]}</span>
+                            <span>${opt.text}</span>
+                        </button>
+                    `;
+                }).join('');
+
+                const exp = q.explanation;
+                const expDictHTML = exp.optionsDict.map(item => `<li>${item}</li>`).join('');
+
+                card.innerHTML = `
+                    <div class="q-header">
+                        <span class="q-number">Câu ${idx + 1} / ${questions.length}</span>
+                        <span class="q-type">${q.type}</span>
+                    </div>
+                    <div class="q-text">${q.question}</div>
+                    <div class="options-grid">
+                        ${optionsHTML}
+                    </div>
+                    <div class="explanation-box" id="exp-${idx}">
+                        <div class="exp-head">💡 GIẢI THÍCH CHI TIẾT TỪ MS LÊ HẰNG:</div>
+                        <div class="exp-section"><strong>1. Dịch câu hỏi:</strong> ${exp.translation}</div>
+                        <div class="exp-section">
+                            <strong>2. Phân tích 4 đáp án:</strong>
+                            <ul class="exp-list">${expDictHTML}</ul>
+                        </div>
+                        <div class="exp-section"><strong>3. Tại sao chọn đáp án này?</strong> ${exp.whyCorrect}</div>
+                        <div class="exp-section"><strong>4. Tại sao các đáp án khác sai?</strong> ${exp.whyIncorrect}</div>
+                    </div>
+                `;
+
+                container.appendChild(card);
+            });
+        }
+
+        function selectAnswer(qIdx, optIdx) {
+            const q = questions[qIdx];
+            if (q.userAnswerIndex !== null) return;
+
+            q.userAnswerIndex = optIdx;
+            const selectedOpt = q.shuffledOptions[optIdx];
+            const isCorrect = selectedOpt.correct;
+
+            const selectedBtn = document.getElementById(`opt-${qIdx}-${optIdx}`);
+
+            if (isCorrect) {
+                selectedBtn.classList.add('correct');
+                playSound('correct');
+                triggerConfetti();
+            } else {
+                selectedBtn.classList.add('wrong');
+                playSound('wrong');
+
+                q.shuffledOptions.forEach((o, i) => {
+                    if (o.correct) {
+                        document.getElementById(`opt-${qIdx}-${i}`).classList.add('correct');
+                    }
+                });
+            }
+
+            q.shuffledOptions.forEach((_, i) => {
+                const b = document.getElementById(`opt-${qIdx}-${i}`);
+                b.disabled = true;
+                b.style.cursor = 'default';
+            });
+
+            document.getElementById(`exp-${qIdx}`).classList.add('show');
+        }
+
+        function submitQuiz() {
+            let correctCount = 0;
+
+            questions.forEach(q => {
+                if (q.userAnswerIndex !== null && q.shuffledOptions[q.userAnswerIndex].correct) {
+                    correctCount++;
+                }
+            });
+
+            const total = questions.length;
+            const percentage = Math.round((correctCount / total) * 100);
+
+            document.getElementById('score-text').innerText = `${correctCount} / ${total} (${percentage}%)`;
+
+            let comment = "";
+            if (percentage < 50) {
+                comment = "Điểm lần này chưa cao lắm, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else if (percentage <= 80) {
+                comment = "Con đã có tiến bộ khá ổn rồi, con cố gắng đọc kỹ giải thích đáp án và làm lại nha. Cô tin con sẽ làm tốt hơn ở lần sau!";
+            } else {
+                comment = "Làm tốt lắm, con cố gắng rinh điểm 10 ở lần sau nha!";
+                triggerConfetti();
+            }
+
+            document.getElementById('comment-text').innerText = comment;
+            document.getElementById('result-modal').style.display = 'flex';
+        }
+
+        function closeModal() {
+            document.getElementById('result-modal').style.display = 'none';
+        }
+
+        function triggerConfetti() {
+            const canvas = document.getElementById('confetti-canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = window.innerWidth;
+            canvas.height = window.innerHeight;
+
+            const particles = [];
+            const colors = ['#8854C0', '#FDCB6E', '#00C9A7', '#FF7675', '#6C5CE7', '#00D26A'];
+
+            for (let i = 0; i < 60; i++) {
+                particles.push({
+                    x: canvas.width / 2,
+                    y: canvas.height / 2,
+                    vx: (Math.random() - 0.5) * 14,
+                    vy: (Math.random() - 0.7) * 14,
+                    size: Math.random() * 8 + 4,
+                    color: colors[Math.floor(Math.random() * colors.length)],
+                    life: 90
+                });
+            }
+
+            function animate() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                let alive = false;
+
+                particles.forEach(p => {
+                    if (p.life > 0) {
+                        alive = true;
+                        p.x += p.vx;
+                        p.y += p.vy;
+                        p.vy += 0.4;
+                        p.life -= 2;
+                        ctx.fillStyle = p.color;
+                        ctx.beginPath();
+                        ctx.arc(p.x, p.y, p.size, 0, Math.PI * 2);
+                        ctx.fill();
+                    }
+                });
+
+                if (alive) requestAnimationFrame(animate);
+                else ctx.clearRect(0, 0, canvas.width, canvas.height);
+            }
+
+            animate();
+        }
+
+        window.onload = initQuiz;
+    </script>
+</body>
+</html>
